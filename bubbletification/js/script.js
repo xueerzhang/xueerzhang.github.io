@@ -47,13 +47,13 @@ window.fbAsyncInit = function() {
 
                 // create a bubble for each notification
                 var i;
-                for (i = 0; i < (nCount + 1); i++) {
+                for (i = 0; i < nCount; i++) {
                     console.log("i = " + i);
 
                     //console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
                     var nId = "/" + response.data[i].id; // get the id of each notification
                     console.log("notification id: " + nId);
-                    console.log("notification title: " + response.data[i].title);
+                    console.log("notification title: " + response.data[i].title.toSource());
 
                     var newBubble = $("<div/>"); //create a div for a new bubble 
                     $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
