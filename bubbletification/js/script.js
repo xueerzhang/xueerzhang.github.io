@@ -45,10 +45,8 @@ window.fbAsyncInit = function() {
                 var nCount = response.data.length; // get the total amount of notifications
                 console.log("nCount = " + nCount);
 
-                var i;
-                // console.log("i = " + i);
-
                 // create a bubble for each notification
+                var i;
                 for (i = 0; i < nCount; i++) {
                     console.log("i = " + i);
 
@@ -58,12 +56,12 @@ window.fbAsyncInit = function() {
 
                     var newBubble = $("<div/>"); //create a div for a new bubble 
                     $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
-                    console.log("poping bubble i = " + i);
 
                     var colors = ["#45b29d", "#efc94c", "#e27a3f", "#df4949"];
                     var rand = Math.floor(Math.random() * colors.length);
                     $(".bubble").css("background-color", colors[rand]);
                     $("#canvas").append(newBubble); //append the newBubble div to the bubbletification canvas
+                    console.log("poping bubble i = " + i);
                 };
             });
         } else {
