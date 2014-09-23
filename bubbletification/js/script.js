@@ -48,26 +48,21 @@ window.fbAsyncInit = function() {
                 var i;
                 // console.log("i = " + i);
 
-                for (i = 0; i < nCount; i++) {
+                // create a bubble for each notification
+                for (i = 1; i <= nCount; i++) {
                     console.log("i = " + i);
 
                     console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
                     var nId = "/" + response.data[i].id; // get the id of each notification
                     console.log("notification id: " + nId);
 
-                    // create a bubble for each notification
-                    FB.api(nId, function(response) {
-                        console.log("/me/notifications response: " + response.toSource());
-                        if (response && !response.error) {
-                            var newBubble = $("<div/>"); //create a div for a new bubble 
-                            $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
-                            console.log("poping bubble i = " + i);
-                            $("#" + i).css("background-color", function() {
-                                '#' + Math.floor(Math.random() * 16777215).toString(16);
-                            });
-                            $("#canvas").append(newBubble); //append the newBubble div to the bubbletification canvas
-                        }
+                    var newBubble = $("<div/>"); //create a div for a new bubble 
+                    $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
+                    console.log("poping bubble i = " + i);
+                    $("#" + i).css("background-color", function() {
+                        '#' + Math.floor(Math.random() * 16777215).toString(16);
                     });
+                    $("#canvas").append(newBubble); //append the newBubble div to the bubbletification canvas
                 };
             });
         } else {
