@@ -59,9 +59,10 @@ window.fbAsyncInit = function() {
                     var newBubble = $("<div/>"); //create a div for a new bubble 
                     $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
                     console.log("poping bubble i = " + i);
-                    $("#" + i).css("background-color", function() {
-                        '#' + Math.floor(Math.random() * 16777215).toString(16);
-                    });
+
+                    var colors = ["#45b29d", "#efc94c", "#e27a3f", "#df4949"];
+                    var rand = Math.floor(Math.random() * colors.length);
+                    $(".bubble").css("background-color", colors[rand]);
                     $("#canvas").append(newBubble); //append the newBubble div to the bubbletification canvas
                 };
             });
