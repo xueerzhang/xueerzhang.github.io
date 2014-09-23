@@ -1,0 +1,63 @@
+.bubble {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: yellow;
+    z-index: 100000;
+    opacity: 0.5;
+    -webkit-animation: bounce 50s linear 0s infinite alternate;
+    animation: bounce 50s linear 0s infinite alternate;
+}
+@-webkit-keyframes bounce {
+    from, to {
+        top: 0;
+        left: 0;
+    }
+    15% {
+        top: 85%;
+        left: 5%;
+    }
+    30% {
+        top: 0;
+        left: 8%;
+    }
+    50% {
+        top: 85%;
+        left: 12%;
+    }
+    70% {
+        top: 0;
+        left: 15%;
+    }
+    85% {
+        top: 85%;
+        left: 8%;
+    }
+}
+@keyframes bounce {
+    from, to {
+        top: 0;
+        left: 0;
+    }
+    15% {
+        top: 85%;
+        left: 5%;
+    }
+    30% {
+        top: 0;
+        left: 8%;
+    }
+    50% {
+        top: 85%;
+        left: 12%;
+    }
+    70% {
+        top: 0;
+        left: 15%;
+    }
+    85% {
+        top: 85%;
+        left: 8%;
+    }
+}
