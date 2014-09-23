@@ -54,7 +54,7 @@ window.fbAsyncInit = function() {
                         if (response && !response.error) {
                             var newBubble = $("<div/>"); //create a div for a new bubble 
                             $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
-                            $("#id").css("background-color", function() {
+                            $("#" + i).css("background-color", function() {
                                 '#' + Math.floor(Math.random() * 16777215).toString(16);
                             });
                             $("#canvas").append(newBubble); //append the newBubble div to the bubbletification canvas
