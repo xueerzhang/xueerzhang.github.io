@@ -13,55 +13,75 @@
     -webkit-animation: bounce 50s linear 0s infinite alternate;
     animation: bounce 50s linear 0s infinite alternate;
 }
-@-webkit-keyframes bounce {
-    from, to {
+@-webkit-keyframes bounce0 {
+    from {
         top: 0;
         left: 0;
     }
-    15% {
-        top: 15%;
+    40% {
+        top: 30%;
         left: 10%;
     }
-    30% {
-        top: 20%;
+    60% {
+        top: 60%;
         left: 0;
     }
-    50% {
-        top: 45%;
-        left: 8%;
-    }
-    70% {
-        top: 70%;
-        left: 5%;
-    }
-    85% {
-        top: 50%;
+    to {
+        top: 0;
         left: 10%;
     }
 }
-@keyframes bounce {
-    from, to {
+@keyframes bounce0 {
+    from {
         top: 0;
         left: 0;
     }
-    15% {
-        top: 15%;
+    40% {
+        top: 30%;
         left: 10%;
     }
-    30% {
-        top: 20%;
+    60% {
+        top: 60%;
         left: 0;
     }
-    50% {
-        top: 45%;
-        left: 8%;
-    }
-    70% {
-        top: 70%;
-        left: 5%;
-    }
-    85% {
-        top: 50%;
+    to {
+        top: 0;
         left: 10%;
+    }
+}
+@-webkit-keyframes bounce1 {
+    from {
+        top: 0;
+        left: 10%;
+    }
+    40% {
+        top: 30%;
+        left: 0;
+    }
+    60% {
+        top: 60%;
+        left: 10%;
+    }
+    to {
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes bounce1 {
+    from {
+        top: 0;
+        left: 10%;
+    }
+    40% {
+        top: 30%;
+        left: 0;
+    }
+    60% {
+        top: 60%;
+        left: 10%;
+    }
+    to {
+        top: 0;
+        left: 0;
     }
 }
