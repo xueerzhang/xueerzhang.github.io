@@ -50,18 +50,20 @@ window.fbAsyncInit = function() {
                 for (i = 0; i < (nCount + 1); i++) {
                     console.log("i = " + i);
 
-                    console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
+                    //console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
                     var nId = "/" + response.data[i].id; // get the id of each notification
                     console.log("notification id: " + nId);
+                    console.log("notification title: " + response.data[i].title);
 
                     var newBubble = $("<div/>"); //create a div for a new bubble 
                     $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
 
                     var colors = ["#45b29d", "#efc94c", "#e27a3f", "#df4949"];
                     var rand = Math.floor(Math.random() * colors.length);
-                    $(".bubble").css("background-color", colors[rand]);
+                    var randColor = colors[rand];
+                    $(".bubble").css("background-color", randColor); //set a random color to each bubble
                     $("#canvas").append(newBubble); //append the newBubble div to the bubbletification canvas
-                    console.log("poping bubble i = " + i);
+                    console.log("poping bubble " + i + "of color " + randColor);
                 };
             });
         } else {

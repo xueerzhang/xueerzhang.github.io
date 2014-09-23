@@ -19,24 +19,24 @@
         left: 0;
     }
     15% {
-        top: 85%;
-        left: 5%;
+        top: 15%;
+        left: 10%;
     }
     30% {
-        top: 0;
-        left: 8%;
+        top: 20%;
+        left: 0;
     }
     50% {
-        top: 85%;
-        left: 12%;
+        top: 45%;
+        left: 8%;
     }
     70% {
-        top: 0;
-        left: 15%;
+        top: 70%;
+        left: 5%;
     }
     85% {
-        top: 85%;
-        left: 8%;
+        top: 50%;
+        left: 10%;
     }
 }
 @keyframes bounce {
@@ -45,23 +45,23 @@
         left: 0;
     }
     15% {
-        top: 85%;
-        left: 5%;
+        top: 15%;
+        left: 10%;
     }
     30% {
-        top: 0;
-        left: 8%;
+        top: 20%;
+        left: 0;
     }
     50% {
-        top: 85%;
-        left: 12%;
+        top: 45%;
+        left: 8%;
     }
     70% {
-        top: 0;
-        left: 15%;
+        top: 70%;
+        left: 5%;
     }
     85% {
-        top: 85%;
-        left: 8%;
+        top: 50%;
+        left: 10%;
     }
 }
