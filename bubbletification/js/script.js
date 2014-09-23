@@ -46,7 +46,7 @@ window.fbAsyncInit = function() {
                 console.log("nCount = " + nCount);
 
                 var i;
-                console.log("i = " + i);
+                // console.log("i = " + i);
 
                 for (i = 0; i < nCount; i++) {
                     console.log("i = " + i);
@@ -57,6 +57,7 @@ window.fbAsyncInit = function() {
 
                     // create a bubble for each notification
                     FB.api(nId, function(response) {
+                        console.log("/me/notifications response: " + response.toSource());
                         if (response && !response.error) {
                             var newBubble = $("<div/>"); //create a div for a new bubble 
                             $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
