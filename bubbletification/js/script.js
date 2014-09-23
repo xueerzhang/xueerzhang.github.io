@@ -43,8 +43,14 @@ window.fbAsyncInit = function() {
                 console.log("the length of /me/notifications/data array: " + response.data.length);
                 //console.log("/me/notifications/data/summary/unseen_count response: " + response.summary.unseen_count.toSource());
                 var nCount = response.data.length; // get the total amount of notifications
+                console.log("nCount = " + nCount);
+
                 var i;
+                console.log("i = " + i);
+
                 for (i = 0; i < nCount; i++) {
+                    console.log("i = " + i);
+
                     console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
                     var nId = "/" + response.data[i].id; // get the id of each notification
                     console.log("notification id: " + nId);
@@ -54,6 +60,7 @@ window.fbAsyncInit = function() {
                         if (response && !response.error) {
                             var newBubble = $("<div/>"); //create a div for a new bubble 
                             $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
+                            console.log("i = " + i);
                             $("#" + i).css("background-color", function() {
                                 '#' + Math.floor(Math.random() * 16777215).toString(16);
                             });
