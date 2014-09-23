@@ -1,3 +1,7 @@
+.img {
+    position: relative;
+    margin: 0 15% 0 15%;
+}
 .bubble {
     position: absolute;
     width: 30px;

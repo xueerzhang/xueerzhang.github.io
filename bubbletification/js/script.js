@@ -48,7 +48,7 @@ window.fbAsyncInit = function() {
                 var i;
                 console.log("i = " + i);
 
-                for (i = 0; i < nCount; i++) {
+                for (i = 0; i <= nCount; i++) {
                     console.log("i = " + i);
 
                     console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
