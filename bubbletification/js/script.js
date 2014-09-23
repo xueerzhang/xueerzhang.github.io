@@ -48,7 +48,7 @@ window.fbAsyncInit = function() {
                 var i;
                 console.log("i = " + i);
 
-                for (i = 0; i <= nCount; i++) {
+                for (i = 0; i < nCount; i++) {
                     console.log("i = " + i);
 
                     console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
@@ -60,7 +60,7 @@ window.fbAsyncInit = function() {
                         if (response && !response.error) {
                             var newBubble = $("<div/>"); //create a div for a new bubble 
                             $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
-                            console.log("i = " + i);
+                            console.log("poping bubble i = " + i);
                             $("#" + i).css("background-color", function() {
                                 '#' + Math.floor(Math.random() * 16777215).toString(16);
                             });
