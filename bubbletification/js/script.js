@@ -38,16 +38,16 @@ window.fbAsyncInit = function() {
 
             //access all the notifications of the user
             FB.api("/me/notifications", function(response) {
-                console.log("/me/notifications response: " + response.toSource());
+                //console.log("/me/notifications response: " + response.toSource());
 
-                console.log("the length of /me/notifications/data array: " + response.data.length);
+                //console.log("the length of /me/notifications/data array: " + response.data.length);
                 //console.log("/me/notifications/data/summary/unseen_count response: " + response.summary.unseen_count.toSource());
                 var nCount = response.data.length; // get the total amount of notifications
-                console.log("nCount = " + nCount);
+                console.log("The amount of notifications is " + nCount);
 
                 // create a bubble for each notification
                 var i;
-                for (i = 0; i < (nCount + 1); i++) {
+                for (i = 0; i < nCount; i++) {
                     console.log("i = " + i);
 
                     //console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
@@ -60,15 +60,18 @@ window.fbAsyncInit = function() {
 
                     //set a random color to each bubble
                     //reference: http://stackoverflow.com/questions/5897573/jquery-random-background-color-and-color-on-2-divs
+                    /* "jQuery.Color() function allows you to create and manipulate color objects 
+                    that are accepted by jQuery's .animate() and .css() functions" -https://github.com/jquery/jquery-color */
                     var colors = ["#45b29d", "#efc94c", "#e27a3f", "#df4949"];
                     var rand = Math.floor(Math.random() * colors.length);
                     var randColor = colors[rand];
-                    $(".bubble").css("background-color", randColor);
+                    $(".bubble").css("backgroundColor", jQuery.Color(randColor));
 
                     //set different animation path to each bubble
-                    var randAnimation = "bounce" + Math.floor(Math.random() * 2) + " 30s linear 0s infinite alternate";
-                    $(".bubble").css("-webkit-animation", randAnimation);
-                    $(".bubble").css("animation", randAnimation);
+                    var randAnimationName = "bounce" + Math.floor(Math.random() * 2);
+                    $(".bubble").css("WebkitAnimationName", randAnimationName);
+                    $(".bubble").css("animationName", randAnimationName);
+                    //console.log("animation name: " + randAnimationName);
 
                     $("#canvas").append(newBubble); //append the newBubble div to the bubbletification canvas
                     console.log("poping bubble " + i + " of color " + randColor);
