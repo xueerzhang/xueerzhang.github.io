@@ -47,7 +47,7 @@ window.fbAsyncInit = function() {
 
                 // create a bubble for each notification
                 var i;
-                for (i = 0; i < nCount; i++) {
+                for (i = 0; i <= nCount; i++) {
                     console.log("i = " + i);
 
                     console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
