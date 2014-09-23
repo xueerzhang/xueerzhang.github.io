@@ -47,7 +47,7 @@ window.fbAsyncInit = function() {
 
                 // create a bubble for each notification
                 var i;
-                for (i = 0; i < nCount; i++) {
+                for (i = 0; i < (nCount + 1); i++) {
                     console.log("i = " + i);
 
                     //console.log("/me/notifications/data/id response: " + response.data[i].id.toSource());
@@ -59,6 +59,7 @@ window.fbAsyncInit = function() {
                     $(newBubble).attr("id", i).addClass("bubble"); //give newBubble div an id and a class
 
                     //set a random color to each bubble
+                    //reference: http://stackoverflow.com/questions/5897573/jquery-random-background-color-and-color-on-2-divs
                     var colors = ["#45b29d", "#efc94c", "#e27a3f", "#df4949"];
                     var rand = Math.floor(Math.random() * colors.length);
                     var randColor = colors[rand];
