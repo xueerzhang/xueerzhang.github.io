@@ -65,7 +65,7 @@ window.fbAsyncInit = function() {
                     $(".bubble").css("background-color", randColor);
 
                     //set different animation path to each bubble
-                    var randAnimation = "bounce" + Math.floor(Math.random()) + " 50s linear 0s infinite alternate";
+                    var randAnimation = "bounce" + Math.floor(Math.random() * 2) + " 30s linear 0s infinite alternate";
                     $(".bubble").css("-webkit-animation", randAnimation);
                     $(".bubble").css("animation", randAnimation);
 
